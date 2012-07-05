@@ -5,13 +5,13 @@ spec = Gem::Specification.new do |s|
   s.version = StringUtf8::VERSION
   s.author = 'qhwa'
   s.email = 'qhwa@163.com'
-  s.homepage = 'http://q.pnq.cc'
+  s.homepage = 'https://github.com/qhwa/string_utf8'
   s.platform = Gem::Platform::RUBY
   s.summary = 'Convert strings encoding to utf8'
 # Add your other files here if you make them
   s.files = %w(
     lib/string_utf8_version.rb
-    lib/string/utf8
+    lib/string/utf8.rb
   )
 
   s.require_paths << 'lib'
