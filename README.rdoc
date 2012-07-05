@@ -1,0 +1,6 @@
+= string_utf8
+
+Try to ~urn a string into utf8 encoding.
+
+:include:string_utf8.rdoc
+
