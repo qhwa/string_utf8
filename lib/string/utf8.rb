@@ -25,18 +25,43 @@ class String
   #   >> "中文".encode('gb2312').utf8!
   #   # => "中文"
   #
-  def utf8!
-    ENCODINGS.any? do |c|
-      begin
-        self.encode!('utf-8', c).force_encoding('utf-8')
-        if self.valid_encoding?
-          $enc = c
-          return self
+
+  if self.public_instance_methods.include?(:encode!)
+
+    # for ruby1.9+
+    def utf8!
+      ENCODINGS.any? do |c|
+        begin
+          self.encode!('utf-8', c).force_encoding('utf-8')
+          if self.valid_encoding?
+            $enc = c
+            true
+          end
+        rescue
         end
-      rescue
       end
+      self
     end
-    self
+
+  else
+    # for ruby 1.8.7-
+    require 'iconv'
+
+    def utf8!
+      ENCODINGS.any? do |c|
+        begin
+          converted = ::Iconv.conv('utf-8', c, self)
+          # detect if UTF8 firendly
+          if converted =~ /^.+$/
+            $enc = c
+            replace( converted )
+            true
+          end
+        rescue
+        end
+      end
+      self
+    end
   end
 
 end
