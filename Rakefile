@@ -20,7 +20,7 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "string_utf8"
-  s.version           = "0.1.0"
+  s.version           = "0.1.1"
   s.summary           = "Convert a string's encoding to utf8, whithout caring which encoding used before converting."
   s.author            = "qhwa"
   s.email             = "qhwa@163.com"

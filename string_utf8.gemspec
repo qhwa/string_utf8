@@ -1,21 +1,20 @@
-# Ensure we require the local version and not one we might have installed already
-require File.join([File.dirname(__FILE__),'lib','string_utf8_version.rb'])
-spec = Gem::Specification.new do |s| 
-  s.name = 'string_utf8'
-  s.version = StringUtf8::VERSION
-  s.author = 'qhwa'
-  s.email = 'qhwa@163.com'
-  s.homepage = 'https://github.com/qhwa/string_utf8'
-  s.platform = Gem::Platform::RUBY
-  s.summary = 'Convert strings encoding to utf8'
-# Add your other files here if you make them
-  s.files = %w(
-    lib/string_utf8_version.rb
-    lib/string/utf8.rb
-  )
+# -*- encoding: utf-8 -*-
 
-  s.require_paths << 'lib'
-  s.has_rdoc = true
-  s.extra_rdoc_files = ['README.rdoc','string_utf8.rdoc']
-  s.rdoc_options << '--title' << 'string_utf8' << '--main' << 'README.rdoc' << '-ri'
+Gem::Specification.new do |s|
+  s.name = "string_utf8"
+  s.version = "0.1.1"
+
+  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
+  s.authors = ["qhwa"]
+  s.date = "2013-09-26"
+  s.email = "qhwa@163.com"
+  s.executables = ["string_utf8"]
+  s.extra_rdoc_files = ["README.md"]
+  s.files = ["README.md", "Rakefile", "string_utf8.gemspec", "Gemfile", "README.rdoc", "string_utf8.rdoc", "bin/string_utf8", "test/tc_string_utf8.rb", "lib/string/utf8.rb", "lib/string_utf8_version.rb"]
+  s.homepage = "https://github.com/qhwa/string_utf8"
+  s.licenses = ["MIT"]
+  s.rdoc_options = ["--main", "README.md"]
+  s.require_paths = ["lib"]
+  s.rubygems_version = "2.0.3"
+  s.summary = "Convert a string's encoding to utf8, whithout caring which encoding used before converting."
 end
