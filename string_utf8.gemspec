@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = "qhwa@163.com"
   s.executables = ["string_utf8"]
   s.extra_rdoc_files = ["README.md"]
-  s.files = ["README.md", "Rakefile", "string_utf8.gemspec", "Gemfile", "README.rdoc", "string_utf8.rdoc", "bin/string_utf8", "test/tc_string_utf8.rb", "lib/string/utf8.rb", "lib/string_utf8_version.rb"]
+  s.files = ["README.md", "Rakefile", "string_utf8.gemspec", "Gemfile", "README.rdoc", "string_utf8.rdoc", "bin/string_utf8", "test/tc_string_utf8.rb", "lib/string", "lib/string/utf8.rb"]
   s.homepage = "https://github.com/qhwa/string_utf8"
   s.licenses = ["MIT"]
   s.rdoc_options = ["--main", "README.md"]
